@@ -29,7 +29,6 @@ module.exports = {
             { test: /pixi\.js/, loader: 'expose?PIXI' },
             { test: /phaser-split\.js$/, loader: 'expose?Phaser' },
             { test: /p2\.js/, loader: 'expose?p2' },
-            { test: /jquery\.js/, loader: 'expose?$' },
         ],
     },
     resolve: {
@@ -37,7 +36,6 @@ module.exports = {
             'phaser': path.join(__dirname, './node_modules/phaser/build/custom/phaser-split.js'),
             'pixi': path.join(__dirname, './node_modules/phaser/build/custom/pixi.js'),
             'p2': path.join(__dirname, './node_modules/phaser/build/custom/p2.js'),
-            'jquery': path.join(__dirname, './node_modules/jquery/dist/jquery.js'),
         },
     },
     plugins: [
@@ -58,10 +56,4 @@ module.exports = {
             },
         ]),
     ],
-    devServer: {
-        contentBase: './dist',
-        progress: true,
-        watch: true,
-        hot: true,
-    }
 };
